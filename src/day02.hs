@@ -1,3 +1,5 @@
+module Day02 where
+
 import System.IO
 
 first :: IO ()
@@ -10,7 +12,7 @@ main = do
 
 parseReports :: IO [[Int]]
 parseReports = do
-    input <- readFile "day02.txt"
+    input <- readFile "input/day02.txt"
     let res = map (map read . words) (lines input)
     return res
 

@@ -1,0 +1,36 @@
+cabal-version:      3.0
+
+name:               aoc2024
+version:            0.1.0.0
+synopsis:           Advent of Code 2024 in Haskell
+homepage:           https://github.com/TymonM/aoc2024
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             tymon
+maintainer:         tymon.mieszkowski@gmail.com
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+common warnings
+    ghc-options: -Wall
+
+library
+    import:           warnings
+    exposed-modules:
+        Day01,
+        Day02,
+        Day03
+    build-depends:
+        base ^>=4.17.2.1,
+        regex-pcre
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable aoc2024runner
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.17.2.1,
+        aoc2024,
+    hs-source-dirs:   app
+    default-language: Haskell2010

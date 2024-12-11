@@ -1,3 +1,5 @@
+module Day01 where
+
 import System.IO
 import Data.List (sort)
 
@@ -11,7 +13,7 @@ main = do
 
 parseInput :: IO ([Int], [Int])
 parseInput = do
-    input <- readFile "day01.txt"
+    input <- readFile "input/day01.txt"
     let res = unzip (map ((\[x, y] -> (read x :: Int, read y :: Int)) . words) (lines input))
     return res
 
