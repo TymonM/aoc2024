@@ -21,5 +21,5 @@ main = do
             putStrLn "\nDay 03"
             Day03.main
         _     -> do
-            putStrLn "Usage: aoc-2024 [daynumber]"
+            putStrLn "Usage: aoc2024runner [daynumber]"
             exitFailure
