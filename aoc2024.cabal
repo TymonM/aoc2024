@@ -16,7 +16,8 @@ library
     exposed-modules:
         Day01,
         Day02,
-        Day03
+        Day03,
+        Day04
     build-depends:
         base ^>=4.17.2.1,
         regex-pcre
