@@ -10,6 +10,7 @@ import qualified Day05
 import qualified Day06
 import qualified Day07
 import qualified Day08
+import qualified Day09
 
 main :: IO ()
 main = do
@@ -23,6 +24,7 @@ main = do
         ["6"] -> Day06.main
         ["7"] -> Day07.main
         ["8"] -> Day08.main
+        ["9"] -> Day09.main
         [] -> do
             putStrLn "Day 01"
             Day01.main
@@ -40,6 +42,8 @@ main = do
             Day07.main
             putStrLn "\nDay 08"
             Day08.main
+            putStrLn "\nDay 09"
+            Day09.main
         _     -> do
             putStrLn "Usage: aoc2024runner [daynumber]"
             exitFailure

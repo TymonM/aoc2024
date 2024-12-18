@@ -21,7 +21,8 @@ library
         Day05,
         Day06,
         Day07,
-        Day08
+        Day08,
+        Day09
     build-depends:
         base ^>=4.17.2.1,
         regex-pcre,
