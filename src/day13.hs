@@ -77,6 +77,9 @@ modinv x m = head $ filter (\y -> (x*y) `mod` m == 1) [1..m-1]
 
 -- see 'Chicken McNugget Theorem'
 -- but the gcd thing is my own idea yay
+-- EDIT: turns out the vectors in the input are 'nice'
+-- and never onSpan with each other, so this is unneeded
+-- for aoc, but still necessary for the general case
 solveLinear :: Int -> Int -> Int -> Int
 solveLinear a b t
     | t `mod` g /= 0 = 0
