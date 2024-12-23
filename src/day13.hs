@@ -84,13 +84,13 @@ solveLinear :: Int -> Int -> Int -> Int
 solveLinear a b t
     | t `mod` g /= 0 = 0
     | g /= 1 = solveLinear (div a g) (div b g) (div t g)
-    | t < a*b = do
+    | t < a*b = do -- btw I think this might actually be wrong and might have to do < 2*a*b...
         let acnt = (t * modinv a b) `mod` b
         if t >= acnt * a then do
             let bcnt = (t-acnt*a) `div` b
             3*acnt + bcnt
         else 0
-    | otherwise = (div t a*b) * (min (b*3) a) + solveLinear a b (t `mod` a*b)
+    | otherwise = (div t a*b) * (min (b*3) a) + solveLinear a b (t `mod` a*b) -- ... which would mean adjust this as well
     where g = gcd a b
 
 solveMachineFast :: Machine -> Int
