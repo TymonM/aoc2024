@@ -17,6 +17,7 @@ common optimizations
 library
     import:           warnings, optimizations
     exposed-modules:
+        AocUtils,
         Day01,
         Day02,
         Day03,
@@ -30,7 +31,8 @@ library
         Day11,
         Day12,
         Day13,
-        Day14
+        Day14,
+        Day15
     build-depends:
         base ^>=4.17.2.1,
         regex-pcre,

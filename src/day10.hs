@@ -7,6 +7,7 @@ import qualified Data.Map as Map
 import Data.Set (Set)
 import qualified Data.Set as Set
 import Data.Maybe (fromJust)
+import AocUtils (cartesianProduct)
 
 firstAndSecond :: IO ()
 
@@ -44,9 +45,6 @@ countNines (x, y) grid mp cur
     where
         height = length grid
         width = length $ head grid
-
-cartesianProduct :: [Int] -> [Int] -> [(Int, Int)]
-cartesianProduct xs ys = [(x,y) | x <- xs, y <- ys]
 
 firstAndSecond = do
     grid <- readGrid
