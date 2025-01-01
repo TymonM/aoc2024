@@ -3,6 +3,7 @@ module Day12 where
 import System.IO
 import Data.Set (Set)
 import qualified Data.Set as Set
+import AocUtils (cartesianProduct)
 
 first :: IO ()
 second :: IO ()
@@ -42,9 +43,6 @@ merge :: [[Char]] -> (Int, Int) -> (Int, Set (Int, Int)) -> (Int, Set (Int, Int)
 merge grid pos (subtotal, st) = do
     let ((area, perimeter), st') = getAreaAndPerimeter grid st pos
     (subtotal + (area*perimeter), st')
-
-cartesianProduct :: [Int] -> [Int] -> [(Int, Int)]
-cartesianProduct xs ys = [(x, y) | x <- xs, y <- ys]
 
 first = do
     grid <- readGrid

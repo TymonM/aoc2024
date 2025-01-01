@@ -6,6 +6,7 @@ import Data.Attoparsec.Text
 import Data.Text (pack)
 import Control.Applicative
 import Data.Either (fromRight)
+import AocUtils (cartesianProduct)
 
 first :: IO ()
 second :: IO ()
@@ -51,9 +52,6 @@ readMachines :: IO (Either String [Machine])
 readMachines = do
     input <- readFile "input/day13.txt"
     return $ parseOnly machinesParser (pack input)
-
-cartesianProduct :: [Int] -> [Int] -> [(Int, Int)]
-cartesianProduct xs ys = [(x, y) | x <- xs, y <- ys]
 
 solveMachineBruteForce :: Machine -> Int
 solveMachineBruteForce Machine{buttonA=(ax,ay), buttonB=(bx,by), target=(tx, ty)} = do
