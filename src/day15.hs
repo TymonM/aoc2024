@@ -10,6 +10,11 @@ import Data.Maybe (fromJust)
 first :: IO ()
 second :: IO ()
 
+main :: IO ()
+main = do
+    first
+    second
+
 data Tile = Space | Box | Wall | LeftBox | RightBox deriving (Show, Eq)
 
 data Grid = Grid {
@@ -18,11 +23,6 @@ data Grid = Grid {
     width :: Int,
     height :: Int
 } deriving (Show)
-
-main :: IO ()
-main = do
-    first
-    second
 
 parseTile :: Char -> Tile
 pareTile '.' = Space
